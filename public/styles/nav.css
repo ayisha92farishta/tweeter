@@ -1,3 +1,19 @@
-nav{
+.navbar{
+  height: 120px;
+  background-color: #40562A;
+  color: #FFFF;
+}
+
+.navbar span{
+  margin-left: 5em;
   font-family: 'Bungee', cursive;
+}
+
+.navbar li {
+  margin-right: 5em;
+  
+  display: flex;
+  justify-content: right;
+  
+
 }

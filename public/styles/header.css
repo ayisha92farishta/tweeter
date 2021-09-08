@@ -1,6 +1,6 @@
 header {
-  background-color: rgb(182, 185, 194);
-  background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+  background-color: #858cb8;
+background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
   display: flex;
   
   flex-direction: column;

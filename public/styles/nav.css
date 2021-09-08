@@ -8,7 +8,9 @@ nav{
   background-color: #675783;
   color: #FFFF;
   font-family: 'Source Sans Pro', sans-serif;
-  
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav span{

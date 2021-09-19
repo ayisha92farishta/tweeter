@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
 
     <!-- External JS -->
@@ -48,7 +49,7 @@
       
     </nav>
 
-    <header>
+    <header class="main-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -60,9 +61,11 @@
 
 
     <!-- Page-specific (main) content here -->
+
     <main class="container">
+      <!-- New tweet input area -->
       <section class="new-tweet" >
-        <h2>Compose Tweet</h2>
+        <!-- <h2>Compose Tweet</h2> -->
         <form action="/tweets" method="POST">
           <div class="userInput">
             <label for="tweet-text">What are you humming about?</label>
@@ -75,17 +78,39 @@
           </div>
         </form>
 
+        <!-- Display of tweets previously submitted -->
+
         <div class="tweet-submitted">
          
           <article>
-             <h5 > Rhonda Jones</h5>
-             <h6>@MrsJacobs</h6>
-          <p name="text" id="tweet-one" > Hello World!</p>
+            <header>
+              <h4><i class="fas fa-user-alt"></i> Rhonda Jones</h4>
+              <h4 class="account-name">@MrsJacobs</h4>
+            </header>
+            <p name="text" class="tweet" > Hello World!</p>
+            <footer>
+              <h6>10 days ago</h6>
+              <ul>
+                <li><i class="fas fa-flag"></i></li>
+                <li><i class="fas fa-retweet"></i></li>
+                <li><i class="far fa-heart"></i></li>
+              </ul>
+            </footer>
           </article>
           <article>
-            <h5 > Newton </h5>
-            <h6>@SirIsaac</h6>
-            <p name="text" id="tweet-two" > If i have seen further it is by standing on the shoulder of giants</p>
+           <header>
+            <h4 ><i class="fas fa-user-alt"></i> Newton </h4>
+             <h4 class="account-name">@SirIsaac</h4>
+           </header>
+             <p name="text" class="tweet" > If i have seen further it is by standing on the shoulder of giants</p>
+             <footer>
+              <h6>10 days ago</h6>
+              <ul>
+                <li><i class="fas fa-flag"></i></li>
+                <li><i class="fas fa-retweet"></i></li>
+                <li><i class="far fa-heart"></i></li>
+              </ul>
+             </footer>
           </article>
         </div>  
       </section>

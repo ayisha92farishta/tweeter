@@ -1,6 +1,6 @@
-header {
+.main-header {
   background-color: #858cb8;
-background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
   display: flex;
   
   flex-direction: column;

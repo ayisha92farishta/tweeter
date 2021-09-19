@@ -4,6 +4,10 @@ main form div {
   width: 850px
 }
 
+.container label{
+  font-weight: bold ;
+  padding-top: 2em;
+}
 
 main form div.userInput {
   font-family: 'Source Sans Pro', sans-serif;

@@ -16,7 +16,7 @@
 }
 
 
-.tweet-submitted header .account-name {
+.tweet-submitted header .handle {
   opacity: 0.6;
   color: rgb(164, 177, 212);
 }

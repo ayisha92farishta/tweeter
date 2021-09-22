@@ -3,8 +3,9 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-$(document).ready(() => {
-  const data = [
+
+
+const data = [
   {
     "user": {
       "name": "Newton",
@@ -25,27 +26,20 @@ $(document).ready(() => {
     "content": {
       "text": "Je pense , donc je suis"
     },
-    "created_at": 1461113959088
+    "created_at": '12 September 2021'
   }
 ]
 
+$(document).ready(() => {
+  
 
-
-const renderTweets = function (tweetsArr) {
-  tweetsArr.forEach(tweet => {
-  $('#tweet-submitted').append($tweet);
-  }) 
-}
 
 const createTweetElement = function (tweetObject) {
+  const $tweetDiv = $(`<article class="tweet"></article>`)
   const markup = 
-  `
-  <div class="tweet-submitted">
-         
-          <article>
-            <header>
+        `<header>
               <h4>
-              ${tweetObject.user.avatars}
+              <img src="${tweetObject.user.avatars}" >
                ${tweetObject.user.name}
                </h4>
               <h4 class="handle"> 
@@ -63,12 +57,17 @@ const createTweetElement = function (tweetObject) {
                 <li><i class="far fa-heart"></i></li>
               </ul>
             </footer>
-          </article>
-  ` ;
-  return markup;
+            ` ;
+  $tweetDiv.html(markup) ;
+  return $tweetDiv;
 }
 
-
+const renderTweets = function (tweetsArr) {
+  tweetsArr.forEach(tweetObj => {
+  const $newTweet = createTweetElement(tweetObj);
+  $('#tweet-submitted').append($newTweet);
+  }) 
+}
 renderTweets(data)
 } )
 

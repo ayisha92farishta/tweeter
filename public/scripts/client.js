@@ -68,8 +68,26 @@ const renderTweets = function (tweetsArr) {
   $('#tweet-submitted').append($newTweet);
   }) 
 }
-renderTweets(data)
-} )
+renderTweets(data);
+
+
+$('.container form').on ('submit', function(event) {
+  console.log('Handler for .submit() called')
+  event.preventDefault();
+  const dataMain = ($(this).serialize());
+  $.post('/tweets', dataMain, function(data,status){
+    data = dataMain;
+    console.log("Data: " + data + "\nStatus: " + status);
+  })
+
+});
+
+
+
+
+
+// document.ready end bracket
+})
 
 
 

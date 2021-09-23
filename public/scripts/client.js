@@ -82,6 +82,19 @@ $('.container form').on ('submit', function(event) {
 
 });
 
+const loadTweets = function () {
+  $.ajax({
+    url: "/tweets",
+    type: 'GET',
+    dataType: 'json', // added data type
+    success: function(res) {
+        console.log(res);
+       
+    }
+});
+}
+
+loadTweets()
 
 
 

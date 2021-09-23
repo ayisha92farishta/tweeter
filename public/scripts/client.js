@@ -68,7 +68,7 @@ const renderTweets = function (tweetsArr) {
   $('#tweet-submitted').append($newTweet);
   }) 
 }
-renderTweets(data);
+//renderTweets(data);
 
 
 $('.container form').on ('submit', function(event) {
@@ -89,14 +89,14 @@ const loadTweets = function () {
     dataType: 'json', // added data type
     success: function(res) {
         console.log(res);
-       
+       renderTweets(res);
     }
 });
 }
 
+//renderTweets(loadTweets()) ;
+
 loadTweets()
-
-
 
 
 // document.ready end bracket

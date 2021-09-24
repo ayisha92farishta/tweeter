@@ -46,16 +46,35 @@ const renderTweets = function (tweetsArr) {
 //renderTweets(data);
 
 
+
+//submitting to server via POST request
+
 $('.container form').on ('submit', function(event) {
-  console.log('Handler for .submit() called')
+  
   event.preventDefault();
+  
+  
   const dataMain = ($(this).serialize());
+  
+//form validation
+  if (dataMain.length > 140) {
+    alert('Now you are just humming too much....')
+  } else {
+    
   $.post('/tweets', dataMain, function(data,status){
     data = dataMain;
     console.log("Data: " + data + "\nStatus: " + status);
   })
+  }
+
+  
+  
+  
+  
 
 });
+
+
 
 const loadTweets = function () {
   $.ajax({
@@ -70,6 +89,9 @@ const loadTweets = function () {
 }
 
 loadTweets()
+
+
+
 
 
 // document.ready end bracket

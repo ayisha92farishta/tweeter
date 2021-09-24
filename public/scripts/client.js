@@ -8,7 +8,7 @@
 $(document).ready(() => {
   
 
-
+  
 const createTweetElement = function (tweetObject) {
   const $tweetDiv = $(`<article class="tweet"></article>`)
   const markup = 
@@ -25,7 +25,7 @@ const createTweetElement = function (tweetObject) {
             ${tweetObject.content.text}
              </p>
             <footer>   
-              <h6>Posted <time class="timeago" datetime="${tweetObject.created_at}"></time> </h6>             
+              <h6>Tweeted ${timeago.format(tweetObject.created_at)} </h6>             
               <ul>
                 <li><i class="fas fa-flag"></i></li>
                 <li><i class="fas fa-retweet"></i></li>
@@ -70,7 +70,6 @@ $('.container form').on ('submit', function(event) {
 });
 
 
-
 const loadTweets = function () {
   $.ajax({
     url: "/tweets",
@@ -84,7 +83,6 @@ const loadTweets = function () {
 }
 
 loadTweets()
-
 
 
 

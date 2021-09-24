@@ -52,8 +52,7 @@ const renderTweets = function (tweetsArr) {
 $('.container form').on ('submit', function(event) {
   
   event.preventDefault();
-  
-  
+
   const dataMain = ($(this).serialize());
   
 //form validation
@@ -64,13 +63,9 @@ $('.container form').on ('submit', function(event) {
   $.post('/tweets', dataMain, function(data,status){
     data = dataMain;
     console.log("Data: " + data + "\nStatus: " + status);
+    
   })
   }
-
-  
-  
-  
-  
 
 });
 

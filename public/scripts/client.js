@@ -40,7 +40,8 @@ const createTweetElement = function (tweetObject) {
 
 //takes in an array of tweet objects and append them inside the div with id #tweet-submitted 
 const renderTweets = function (tweetsArr) {
-  tweetsArr.forEach(tweetObj => {
+  const newArr = tweetsArr.reverse();
+  newArr.forEach(tweetObj => {
   const $newTweet = createTweetElement(tweetObj);
   $('#tweet-submitted').append($newTweet);
   }) 
@@ -60,15 +61,18 @@ $('.container form').on ('submit', function(event) {
 //form validation
   if (dataMain.length > 140) {
 
-     alert('Now you are just humming too much....')
-  } else {
-   
+     //error message shows up
+     $('.error-msg .error-text').text('We can only take so much humming, please stay within the character limit.');
+     $('.error-msg').hide().slideDown('300');
+  }  else {
+    $('.error-msg').hide().slideUp('slow');
     //ajax post request to the server
-  $.post('/tweets', dataMain, function(data,status){
-    data = dataMain;
-    console.log("Data: " + data + "\nStatus: " + status);
+
+  $.post('/tweets', dataMain, function(data,status){ 
+    loadTweets()
     
-  })
+  });
+  
   }
 
 });
@@ -82,8 +86,8 @@ const loadTweets = function () {
     type: 'GET',
     dataType: 'json', // added data type
     success: function(res) {
-        console.log(res);
-       renderTweets(res);
+      $('#tweet-submitted').empty();
+      renderTweets(res);
     }
 });
 }

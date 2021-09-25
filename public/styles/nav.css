@@ -28,6 +28,10 @@ nav span{
   align-items: center;
 }
 
-.nav-links i:hover{
- color: rgb(209, 127, 20);
+
+
+.nav-links i:hover {
+  color: rgb(209, 127, 20);
+  
 }
+

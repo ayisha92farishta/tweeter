@@ -12,11 +12,12 @@ $(document).ready(() => {
   //hides forms by default
   $('.container form').hide()
 
-  //making the down arrow key functional
+  //clicking the down arrow key makes the form to appear and dissapear.
 $('#down-arrow').on('click', function(){
   console.log('Button clicked!');
-  $('.container form').toggle('slow');
-  
+  $('html, body').animate({scrollTop: '0px'}, 300);
+  $('.container form').hide().slideDown('500');
+
 })
 
 //takes in tweet object and convert it into markup

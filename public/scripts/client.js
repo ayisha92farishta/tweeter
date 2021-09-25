@@ -12,7 +12,12 @@ $(document).ready(() => {
   //hides forms by default
   $('.container form').hide()
 
-//
+  //making the down arrow key functional
+$('#down-arrow').on('click', function(){
+  console.log('Button clicked!');
+  $('.container form').toggle('slow');
+  
+})
 
 //takes in tweet object and convert it into markup
 const createTweetElement = function (tweetObject) {

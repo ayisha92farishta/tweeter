@@ -6,11 +6,10 @@
 
 
 $(document).ready(() => {
-  
+  // hides error message by default
   $('.error-msg').hide()
 
-
-  
+//takes in tweet object and convert it into markup
 const createTweetElement = function (tweetObject) {
   const $tweetDiv = $(`<article class="tweet"></article>`)
   const markup = 
@@ -39,30 +38,32 @@ const createTweetElement = function (tweetObject) {
   return $tweetDiv;
 }
 
+//takes in an array of tweet objects and append them inside the div with id #tweet-submitted 
 const renderTweets = function (tweetsArr) {
   tweetsArr.forEach(tweetObj => {
   const $newTweet = createTweetElement(tweetObj);
   $('#tweet-submitted').append($newTweet);
   }) 
 }
-//renderTweets(data);
-
 
 
 //submitting to server via POST request
 
 $('.container form').on ('submit', function(event) {
   
+  //prevents default behaviour
   event.preventDefault();
   
+  //serialize the data - creates a text string in standard URL-encoded notation by serializing form values.
   const dataMain = ($(this).serialize());
   
 //form validation
   if (dataMain.length > 140) {
-    
+
      alert('Now you are just humming too much....')
   } else {
    
+    //ajax post request to the server
   $.post('/tweets', dataMain, function(data,status){
     data = dataMain;
     console.log("Data: " + data + "\nStatus: " + status);
@@ -72,7 +73,9 @@ $('.container form').on ('submit', function(event) {
 
 });
 
-
+//function to load all tweets submitted using 
+// 1. ajax get request to pull in data from server 
+// 2. then feeding that information to renderTweets() function
 const loadTweets = function () {
   $.ajax({
     url: "/tweets",

@@ -7,6 +7,8 @@
 
 $(document).ready(() => {
   
+  $('.error-msg').hide()
+
 
   
 const createTweetElement = function (tweetObject) {
@@ -52,14 +54,15 @@ const renderTweets = function (tweetsArr) {
 $('.container form').on ('submit', function(event) {
   
   event.preventDefault();
-
+  
   const dataMain = ($(this).serialize());
   
 //form validation
   if (dataMain.length > 140) {
-    alert('Now you are just humming too much....')
-  } else {
     
+     alert('Now you are just humming too much....')
+  } else {
+   
   $.post('/tweets', dataMain, function(data,status){
     data = dataMain;
     console.log("Data: " + data + "\nStatus: " + status);

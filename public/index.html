@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/error-msg.css" type="text/css" />
 
 
     <!-- External JS -->
@@ -40,8 +41,6 @@
 
    <!-- time ago -->
 
-     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" integrity="sha512-RlGrSmkje9EE/FXpJKWf0fvOlg4UULy/blvNsviBX9LFwMj/uewXVoanRbxTIRDXy/0A3fBQppTmJ/qOboJzmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
- -->
 
      <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -78,13 +77,26 @@
     <main class="container">
       <!-- New tweet input area -->
       <section class="new-tweet" >
+        
+        
+        
         <!-- <h2>Compose Tweet</h2> -->
+        
         <form action="/tweets" method="POST">
+          
+          <!-- error message -->
+        
+          <div class="error-msg">
+            <span class="error-text">We can only take so much humming, please stay within the character limit.</span>
+          </div>
+
+
           <div class="userInput">
             <label for="tweet-text">What are you humming about?</label>
             <textarea name="text" id="tweet-text" type='text' required minlength="1"></textarea>
             
           </div>
+          
           
           <div class="submit">
             <button type="submit" >Tweet</button>

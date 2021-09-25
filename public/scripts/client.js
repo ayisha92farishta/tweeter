@@ -9,6 +9,11 @@ $(document).ready(() => {
   // hides error message by default
   $('.error-msg').hide()
 
+  //hides forms by default
+  $('.container form').hide()
+
+//
+
 //takes in tweet object and convert it into markup
 const createTweetElement = function (tweetObject) {
   const $tweetDiv = $(`<article class="tweet"></article>`)

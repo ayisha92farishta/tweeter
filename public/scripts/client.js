@@ -69,8 +69,8 @@ $('.container form').on ('submit', function(event) {
     //ajax post request to the server
 
   $.post('/tweets', dataMain, function(data,status){ 
-    loadTweets()
-    
+    loadTweets(); 
+    $('.container form textarea').val('')  
   });
   
   }

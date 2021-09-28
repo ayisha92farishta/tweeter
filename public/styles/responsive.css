@@ -1,0 +1,13 @@
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  .main-header {
+    width: 33.3%;
+    float: left;
+    margin: 5%;
+    
+
+
+  }
+
+
+}

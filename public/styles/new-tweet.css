@@ -1,7 +1,12 @@
+.container{
+  display: flex;
+}
+
 main form div {
   display: flex;
   justify-content: space-between;
-  width: 850px
+  width: 100%;
+  margin-top: 10%;
 }
 
 .container label{
@@ -29,7 +34,6 @@ main form div button {
   appearance:none;
   -webkit-appearance:none;
 
-  /* usual styles */
   padding:10px;
   border:none;
   background-color:#3F51B5;
@@ -47,5 +51,5 @@ main form div textarea {
   border-radius:10px;
   border: none;
   background-color: #f4f1ec;
-  /* transition: .3s border-color; */
+  
 } 

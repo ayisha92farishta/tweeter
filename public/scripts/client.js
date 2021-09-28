@@ -74,9 +74,11 @@ $('.container form').on ('submit', function(event) {
 
      //error message shows up
      $('.error-msg .error-text').text('We can only take so much humming, please stay within the character limit.');
-     $('.error-msg').hide().slideDown('300');
+     $('.error-msg').slideDown('300');
   }  else {
-    $('.error-msg').hide().slideUp('slow');
+    //error message goes away
+    $('.error-msg').slideUp('300');
+        
     //ajax post request to the server
 
   $.post('/tweets', dataMain, function(data,status){ 

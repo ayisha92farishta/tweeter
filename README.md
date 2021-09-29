@@ -31,7 +31,7 @@ Tweeter is a simple, single-page Twitter clone with simple functionality.
 ## App Functionality
 
 - Click on the button below 'Write a new tweet' and tweet away to your heart's content!
-- But do keep the character limit in mind as *'We can only take so much humming'*.
+- But do keep the character limit in mind as *'We can only take so much humming'*.Also you cannot leave the text input field empty. 
 - Once you are done submitting a valid tweet, click on the top right button again to make the *text iput field* go away.
 - This app's design has been made responsive to various different screens (i.e mobile, tablet and large monitor)
 - After posting your tweet it shall appear below with details on when its been posted. 

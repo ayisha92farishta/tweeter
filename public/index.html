@@ -67,14 +67,14 @@
       </ul>
       
     </nav>
-
+     <!-- header with name and picture of user -->
     <header class="main-header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
-          <h2>Farishta</h2>
+          <h2>Miss Tweet-a-lot</h2>
       </div>
   </header>
 
@@ -82,10 +82,13 @@
     <!-- Page-specific (main) content here -->
 
     <main class="container">
+
       <!-- New tweet input area -->
+
       <section class="new-tweet" >
         
-        <!-- form for new tweet input and submit         -->
+        <!-- form for new tweet input and submit -->
+
         <form action="/tweets" method="POST">
           
           <!-- error message -->
@@ -94,6 +97,7 @@
             <span class="error-text"></span>
           </div>
 
+          <!-- user input for new tweet  -->
 
           <div class="userInput">
             <label for="tweet-text">What are you humming about?</label>
@@ -101,7 +105,8 @@
             
           </div>
           
-          
+          <!-- submit and counter button -->
+
           <div class="submit">
             <button type="submit" >Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
@@ -112,7 +117,7 @@
 
         <div id="tweet-submitted">
          
-
+          <!-- codes appended from client.js -->
           
         </div>  
       </section>

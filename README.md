@@ -6,7 +6,7 @@ Tweeter is a simple, single-page Twitter clone with simple functionality.
 
 ![Deskop View](./public/images/screenshot-1.png "Deskop View")
 ![Deskop View](./public/images/screenshot-2.png "Mobile/Tablet View")
-![Deskop View](./public/images/screenshot-3.png "Deskop View with user input form")
+![Deskop View](./public/images/screenshot-3.png "Deskop View without user input form")
 
 
 ## Getting Started
@@ -37,4 +37,4 @@ Tweeter is a simple, single-page Twitter clone with simple functionality.
 - After posting your tweet it shall appear below with details on when its been posted. 
 
 
-** Its a somple App which focuses mainly on frontend development. Take it for a spin, play around and hope you have fun! **
+**Its a somple App which focuses mainly on frontend development. Take it for a spin, play around and hope you have fun!**

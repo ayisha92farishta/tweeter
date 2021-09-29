@@ -1,5 +1,13 @@
 .container{
+
   display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+.container .new-tweet{
+  width: 100%;
 }
 
 main form div {

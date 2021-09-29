@@ -14,9 +14,9 @@ $(document).ready(() => {
 
   //clicking the down arrow key makes the form to appear and dissapear.
 $('#down-arrow').on('click', function(){
-  console.log('Button clicked!');
+ 
   $('html, body').animate({scrollTop: '0px'}, 300);
-  $('.container form').hide().slideDown('500');
+  $('.container form').toggle('500');
 
 })
 

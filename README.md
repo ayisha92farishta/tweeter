@@ -4,7 +4,7 @@ Tweeter is a simple, single-page Twitter clone with simple functionality.
 
 ## How it looks
 
-![Deskop View](./public/images/screenshot-1.png, "Deskop View")
+![Deskop View](./public/images/screenshot-1.png "Deskop View")
 
 
 ## Getting Started

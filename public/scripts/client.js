@@ -33,7 +33,7 @@ $(document).ready(() => {
               ${tweetObject.user.handle}
               </h4>
             </header>
-            <p name="text" class="tweet" >
+            <p name="text" class="tweet" id="previous-tweets">
             ${tweetObject.content.text}
              </p>
             <footer>   
@@ -65,17 +65,21 @@ $(document).ready(() => {
   
     //prevents default behaviour
     event.preventDefault();
-  
+       
     //serialize the data - creates a text string in standard URL-encoded notation by serializing form values.
     const dataMain = ($(this).serialize());
-  
+     
     //form validation
-    if (dataMain.length > 145) {
+     if (dataMain.length < 6){
+      $('.error-msg .error-text').text('You must have something to hum about.');
+      $('.error-msg').slideDown('300');
+    }else if (dataMain.length > 145) {
 
       //error message shows up
       $('.error-msg .error-text').text('We can only take so much humming, please stay within the character limit.');
       $('.error-msg').slideDown('300');
-    }  else {
+    } 
+    else {
     //error message goes away
       $('.error-msg').slideUp('300');
         

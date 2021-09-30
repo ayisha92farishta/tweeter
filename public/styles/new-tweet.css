@@ -3,24 +3,20 @@
   padding-left: 20px;
   padding-right: 20px;
 }
-
 .container .new-tweet {
   width: 100%;
 }
-
-main form div {
+.container label {
+  font-weight: bold;
+  padding-top: 2em;
+}
+.container form div {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-top: 10%;
 }
-
-.container label {
-  font-weight: bold;
-  padding-top: 2em;
-}
-
-main form div.userInput {
+.container form .userInput {
   font-family: "Source Sans Pro", sans-serif;
   display: flex;
   flex-direction: column;
@@ -28,12 +24,10 @@ main form div.userInput {
   border-width: 5px;
   margin-bottom: 20px;
 }
-
-main form div.submit {
+.container form .submit {
   font-family: "Bungee", cursive;
 }
-
-main form div button {
+.container form button {
   appearance: none;
   -webkit-appearance: none;
   padding: 10px;
@@ -44,8 +38,7 @@ main form div button {
   border-radius: 5px;
   width: 20%;
 }
-
-main form div textarea {
+.container form textarea {
   display: flex;
   width: 100%;
   margin: 10px 0;

@@ -70,7 +70,7 @@ $(document).ready(() => {
     const dataMain = ($(this).serialize());
   
     //form validation
-    if (dataMain.length > 140) {
+    if (dataMain.length > 145) {
 
       //error message shows up
       $('.error-msg .error-text').text('We can only take so much humming, please stay within the character limit.');
@@ -84,8 +84,9 @@ $(document).ready(() => {
       $.post('/tweets', dataMain, function(data,status) {
         loadTweets();
         $('.container form textarea').val('');
+        $('.counter').val('140');
       });
-  
+       
     }
 
   });

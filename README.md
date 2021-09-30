@@ -25,6 +25,7 @@ Tweeter is a simple, single-page Twitter clone with simple functionality.
 - Express 4.17.1
 - md 52.3.0
 - Timeago.js 4.0.2
+- Sass 1.42.1
 
 
 

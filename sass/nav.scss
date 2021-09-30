@@ -1,4 +1,4 @@
-nav{
+nav {
   
   display: flex;
   padding: 1.5em;
@@ -11,27 +11,28 @@ nav{
   position: sticky;
   top: 0;
   z-index: 100;
+
+  span{
+    font-family: 'Bungee', cursive;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    li {
+    list-style: none;
+    }
+
+    i:hover {
+    color: rgb(209, 127, 20);
+    }
+  }
 }
 
-nav span{
-  
-  font-family: 'Bungee', cursive;
-}
-
-.nav-links li {
-  list-style: none;
-}
-
-.nav-links{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 
+ 
 
-.nav-links i:hover {
-  color: rgb(209, 127, 20);
-  
-}
 

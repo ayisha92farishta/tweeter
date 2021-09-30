@@ -1,5 +1,4 @@
-nav{
-  
+nav {
   display: flex;
   padding: 1.5em;
   align-items: center;
@@ -7,31 +6,22 @@ nav{
   height: 100px;
   background-color: #675783;
   color: #FFFF;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   position: sticky;
   top: 0;
   z-index: 100;
 }
-
-nav span{
-  
-  font-family: 'Bungee', cursive;
+nav span {
+  font-family: "Bungee", cursive;
 }
-
-.nav-links li {
-  list-style: none;
-}
-
-.nav-links{
+nav .nav-links {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-
-
-.nav-links i:hover {
-  color: rgb(209, 127, 20);
-  
+nav .nav-links li {
+  list-style: none;
 }
-
+nav .nav-links i:hover {
+  color: #d17f14;
+}
